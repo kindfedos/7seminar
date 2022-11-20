@@ -9,23 +9,23 @@ PrintArray(numbers);
 
 void FillArrayRandomNumbers(double[,] array)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int x = 0; x < array.GetLength(0); x++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int y = 0; y < array.GetLength(1); y++)
         {
-            array[i, j] = Convert.ToDouble(new Random().Next(-100, 100)) / 10;
+            array[x, y] = Convert.ToDouble(new Random().Next(-100, 100)) / 10;
         }
     }
 }
 
 void PrintArray(double[,] array)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int x = 0; x < array.GetLength(0); x++)
     {
         Console.Write("[ ");
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int y = 0; y < array.GetLength(1); y++)
         {
-            Console.Write(array[i, j] + " ");
+            Console.Write(array[x, y] + " ");
         }
         Console.Write("]");
         Console.WriteLine("");
